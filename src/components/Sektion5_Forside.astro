@@ -1,0 +1,29 @@
+---
+
+---
+
+<section
+  class="h-screen w-full bg-cover bg-center flex justify-center items-center"
+  style="background-image: url('/Sektion5_bg.webp');"
+>
+  <div class="parallaxelement">
+    <p
+      class="font-IvyOra font-light text-qutoe-mobile text-BW-50 italic flex justify-center text-center md:w-[650px]"
+    >
+      “Hver gang jeg blev forelsket, blev jeg ramt af frygten for at miste”
+    </p>
+    <p
+      class="font-Brandon font-light text-p-M-mobile text-BW-50 italic flex justify-center pt-6 md:text-p-M-desktop md:justify-end md:text-right w-full"
+    >
+      Portræt af Jane Birkin
+    </p>
+  </div>
+</section>
+
+<script>
+  /* Import the Motion One library */
+  import { scroll, animate } from "motion";
+
+  /* Parallax scrolling effect */
+  scroll(animate(".parallaxelement", { y: [900, 0] }));
+</script>
