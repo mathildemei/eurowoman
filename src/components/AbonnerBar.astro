@@ -1,0 +1,28 @@
+---
+import Button from "../components/Button.astro";
+---
+
+<section
+  class="fixed bottom-0 left-0 right-0 bg-none text-BW-50 p-4 md:bg-Navy-500 md:flex justify-between items-center"
+>
+  <!-- For Mobile: Show only Button, centered -->
+  <div class="flex justify-center md:hidden">
+    <a href="/abonner">
+      <Button variant="primary">ABONNER</Button>
+    </a>
+  </div>
+
+  <!-- For Desktop: Show text box and button to the right -->
+  <div class="hidden md:flex justify-between items-center w-full pr-6 pl-6">
+    <div class="text-BW-50">
+      <p class="font-Brandon font-light text-p-L-desktop">
+        Få Eurowoman leveret til din dør
+      </p>
+    </div>
+    <div class="border-[1px] border-Bubblegum-500">
+      <a href="/abonner">
+        <Button variant="primary">ABONNER</Button>
+      </a>
+    </div>
+  </div>
+</section>
