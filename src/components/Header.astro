@@ -1,5 +1,15 @@
 ---
+import Link from "../components/Link.astro";
+import { Image } from "astro:assets";
+import logo from "../assets/images/logo.webp";
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+
+<section
+  class="flex flex-row justify-center items-center font-IvyOra font-light gap-12 pt-6 pb-6"
+>
+  <Link href="/kontakt" target="_blank">Kontakt</Link>
+  <a href="/">
+    <Image src={logo} alt="Eurowoman logo" class="w-[168px] h-[24px]" />
+  </a>
+  <Link href="/arkiv" target="_blank">Arkiv</Link>
+</section>
