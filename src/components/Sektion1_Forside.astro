@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import Grafik from "../assets/images/sektion1-text.webp";
+---
+
+<section
+  class="mt-8 h-screen w-full bg-cover bg-center flex justify-center items-center"
+  style="background-image: url('/sektion-bg.webp');"
+>
+  <!-- Centered Image -->
+  <div class="parallaxelement">
+    <Image src={Grafik} alt="Eurowoman grafisk element" />
+  </div>
+</section>
+
+<script>
+  /* Import the Motion One library */
+  import { scroll, animate } from "motion";
+
+  /* Parallax scrolling effect */
+  scroll(animate(".parallaxelement", { y: [250, 0] }));
+</script>
