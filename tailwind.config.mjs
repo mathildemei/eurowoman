@@ -171,6 +171,9 @@ export default {
             4: '4px',
         },
 
+        cursor: {
+            'handcursor': 'url(/cursor.webp) 20 20, pointer',
+        	}
 
         },
 	},
