@@ -1,0 +1,24 @@
+---
+import { Image } from "astro:assets";
+import KateMoss from "../assets/images/KateMoss.webp";
+import Button from "../components/Button.astro";
+---
+
+<section
+  class="h-[400px] w-full bg-cover bg-center flex justify-center items-center"
+  style="background-image: url('/Sektion3_Grafik.webp');"
+>
+  <div class="">
+    <Image src={KateMoss} alt="Eurowoman artikel om Kate Moss" />
+    <p
+      class="font-Brandon font-light text-p-M-mobile italic flex justify-center pt-6 md:text-p-L-desktop"
+    >
+      Læs eksklusivt portræt af Kate Moss
+    </p>
+    <div class="block hidden md:flex justify-center pt-6">
+      <a href="/abonner">
+        <Button variant="primary">ABONNER</Button>
+      </a>
+    </div>
+  </div>
+</section>
