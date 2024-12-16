@@ -1,5 +1,15 @@
 ---
+const { variant = "primary" } = Astro.props;
+
+const variantClasses = {
+  primary:
+    "text-Bubblegum-500 bg-Navy-500 font-Brandon font-regular font-p-L-desktop pt-1.5 pb-1.5 pl-12 pr-12 hover:bg-Bubblegum-500 hover:text-Navy-500",
+
+  secondary:
+    "text-Navy-500 bg-Bubblegum-500 font-Brandon font-regular font-p-L-desktop pt-1.5 pb-1.5 pl-12 pr-12 hover:bg-Navy-500 hover:text-Bubblegum-500",
+};
 ---
-<div>
-    <button class="border-2 border-black"><slot /></button>
-</div>
+
+<button class:list={[variantClasses[variant]]}><slot /></button>
+
+<!-- <Button variant="primary">Hej</Button> -->
