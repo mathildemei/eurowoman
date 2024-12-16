@@ -6,13 +6,18 @@ import "animate.css";
 const { title } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.webp" />
     <link rel="stylesheet" href="https://use.typekit.net/mai6hjl.css" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={Astro.props.description} />
+    <meta property="og:description" content={Astro.props.ogdescription} />
+    <meta property="og:locale" content="da_DK" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={Astro.props.ogtitle} />
     <title>{Astro.props.title}</title>
   </head>
   <body>
