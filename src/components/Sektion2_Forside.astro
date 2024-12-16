@@ -11,62 +11,88 @@ import img7 from "../assets/images/sektion2_img7.webp";
 <section class="pl-6 pr-6">
   <div class="flex flex-col items-end pb-6 pt-12">
     <div class="text-left">
-      <h1 class="font-IvyOra font-light text-h1-mobile">NYESTE HISTORIER</h1>
-      <p class="font-Brandon font-light text-p-M-mobile">
+      <h1 class="font-IvyOra font-light text-h1-mobile lg:text-h1-desktop">
+        NYESTE HISTORIER
+      </h1>
+      <p class="font-Brandon font-light text-p-M-mobile lg:text-p-L-desktop">
         Læs i Eurowoman December 2024
       </p>
     </div>
   </div>
   <article class="">
-    <div class="flex flex-row gap-6">
-      <div>
+    <div class="flex flex-col md:flex-row gap-6 pb-6">
+      <div class="flex flex-row gap-6">
+        <div>
+          <Image
+            src={img1}
+            alt="Eurowoman artikel om vinterens varmeste striktrøjer"
+          />
+          <p class="font-Brandon font-light text-p-M-mobile italic">
+            Vinterens varmester striktrøjer!
+          </p>
+        </div>
+        <div>
+          <Image src={img2} alt="Eurowoman artikel om skotrends i 2025" />
+          <p class="font-Brandon font-light text-p-M-mobile italic">
+            Skotrends i 2025!
+          </p>
+        </div>
+      </div>
+      <div class="pt-3 lg:pt-0">
         <Image
-          src={img1}
-          alt="Eurowoman artikel om vinterens varmeste striktrøjer"
+          src={img3}
+          alt="Eurowoman artikel om modeekspert spår ny trend"
         />
-        <p class="font-Brandon font-light text-p-M-mobile italic">
-          Vinterens varmester striktrøjer!
-        </p>
-      </div>
-      <div>
-        <Image src={img2} alt="Eurowoman artikel om skotrends i 2025" />
-        <p class="font-Brandon font-light text-p-M-mobile italic">
-          Skotrends i 2025!
+        <p class="font-Brandon font-light text-p-M-mobile italic md:w-[330px]">
+          Modeekspert spår en ny tendens: ”Jeg tror, at det er blevet de gamle
+          damers tid”
         </p>
       </div>
     </div>
-    <div class="pt-3">
-      <Image src={img3} alt="Eurowoman artikel om modeekspert spår ny trend" />
-      <p class="font-Brandon font-light text-p-M-mobile italic">
-        Modeekspert spår en ny tendens: ”Jeg tror, at det er blevet de gamle
-        damers tid”
-      </p>
-    </div>
-    <div class="flex flex-row gap-6 pt-3">
-      <div>
-        <Image
-          src={img4}
-          alt="Eurowoman artikel om must haves i din 2025 garderobe"
-        />
+    <div class="md:flex flex-row gap-6">
+      <div class="md:flex flex-row">
+        <div class="flex flex-row md:flex-col gap-6 items-end justify-end pb-6">
+          <div class="flex flex-row md:flex-col gap-6 pt-3">
+            <div>
+              <Image
+                src={img4}
+                alt="Eurowoman artikel om must haves i din 2025 garderobe"
+              />
+              <p class="font-Brandon font-light text-p-M-mobile italic">
+                Must haves i din 2025 garderobe
+              </p>
+            </div>
+          </div>
+          <div>
+            <Image
+              src={img5}
+              alt="Eurowoman artikel om sådan opnår du sundt hår"
+            />
+            <p class="font-Brandon font-light text-p-M-mobile italic">
+              Sådan opnår du sundt hår
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="pt-3 lg:pt-3">
+        <video src="/Sektion2_6.mov" loop muted autoplay class="w-full h-[auto]"
+        ></video>
         <p class="font-Brandon font-light text-p-M-mobile italic">
-          Must haves i din 2025 garderobe
+          “Dette er uden tvivl vinterens hotteste farve”
         </p>
       </div>
-      <div>
-        <Image src={img5} alt="Eurowoman artikel om sådan opnår du sundt hår" />
-        <p class="font-Brandon font-light text-p-M-mobile italic">
-          Sådan opnår du sundt hår
-        </p>
-      </div>
     </div>
-    <div class="pt-3">
-      <video src="/Sektion2_6.mov" loop muted autoplay class="w-full h-auto"
-      ></video>
-      <p class="font-Brandon font-light text-p-M-mobile italic">
-        “Dette er uden tvivl vinterens hotteste farve”
-      </p>
-    </div>
-    <div class="w-[240px] flex flex-col justify-end items-end ml-auto pt-3">
+  </article>
+  <div class="pr-0 md:flex gap-6 lg:pr-96">
+    <div
+      class="w-[300px]
+      flex
+      flex-col
+      justify-end
+      items-end
+      ml-auto
+      pt-3 md:items-start"
+    >
       <Image
         src={img7}
         alt="Eurowoman artikel om top 10 mest populære sneakers"
@@ -76,11 +102,11 @@ import img7 from "../assets/images/sektion2_img7.webp";
       </p>
     </div>
     <div class="pt-3">
-      <video src="/Sektion2_8.mov" loop muted autoplay class="w-[177px] h-auto"
+      <video src="/Sektion2_8.mov" loop muted autoplay class="w-[230px] h-auto"
       ></video>
       <p class="font-Brandon font-light text-p-M-mobile italic">
         Redaktions vinterfavoritter 2024
       </p>
     </div>
-  </article>
+  </div>
 </section>
