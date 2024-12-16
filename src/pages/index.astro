@@ -3,16 +3,11 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Link from "../components/Link.astro";
 import { Image } from "astro:assets";
+import Hero from "../components/Hero.astro";
 ---
 
-<MainLayout title="Titel">
-  <article>
-    <h1 class="font-Brandon font-medium">Index overskrift</h1>
-    <Button variant="primary">Hej</Button>
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank"
-        >En anden side</Link
-      >
-    </p>
-  </article>
+<MainLayout title="Homepage">
+  <section>
+    <Hero />
+  </section>
 </MainLayout>

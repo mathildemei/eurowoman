@@ -1,0 +1,100 @@
+---
+import Button from "../components/Button.astro";
+
+// Array of images for the hero section
+const images = [
+  {
+    src: "/heroimages/decembercover.webp",
+    alt: "Eurowoman December issue cover",
+  },
+  { src: "/heroimages/hero2.webp", alt: "Eurowoman udvalgte artikler" },
+  { src: "/heroimages/hero3.webp", alt: "Eurowoman udvalgte artikler" },
+  { src: "/heroimages/hero4.webp", alt: "Eurowoman udvalgte artikler" },
+  { src: "/heroimages/hero5.webp", alt: "Eurowoman udvalgte artikler" },
+];
+---
+
+<section class="relative">
+  <!-- Dynamic Hero Section Container -->
+  <div
+    id="hero"
+    class="flex flex-col justify-center items-center pl-3 pr-3 pt-12 pb-12 cursor-pointer"
+    client:load
+  >
+    <!-- Page Indicator -->
+    <p id="page-indicator" class="pb-3 font-Brandon font-light text-Navy-500">
+      1/{images.length}
+    </p>
+
+    <!-- Dynamic Image -->
+    <img
+      class="w-full md:w-1/6 lg:w-1/4"
+      id="hero-image"
+      src={images[0].src}
+      alt={images[0].alt}
+      class="w-full max-w-screen"
+    />
+  </div>
+
+  <!-- Subscription Button -->
+  <div class="flex flex-row justify-center items-center">
+    <Button variant="primary">ABONNER</Button>
+  </div>
+
+  <!-- Add JavaScript for Image Switching -->
+  <script>
+    // Use image paths directly from the public folder
+    const images = [
+      {
+        src: "/heroimages/decembercover.webp",
+        alt: "Eurowoman December issue cover",
+      },
+      { src: "/heroimages/hero2.webp", alt: "Eurowoman udvalgte artikler" },
+      { src: "/heroimages/hero3.webp", alt: "Eurowoman udvalgte artikler" },
+      { src: "/heroimages/hero4.webp", alt: "Eurowoman udvalgte artikler" },
+      { src: "/heroimages/hero5.webp", alt: "Eurowoman udvalgte artikler" },
+    ];
+
+    let currentIndex = 0;
+
+    // Get DOM elements
+    const heroImage = document.getElementById("hero-image");
+    const pageIndicator = document.getElementById("page-indicator");
+    const heroContainer = document.getElementById("hero");
+
+    // Event listener to cycle images on click
+    heroContainer.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % images.length; // Loop through images
+      heroImage.src = images[currentIndex].src;
+      heroImage.alt = images[currentIndex].alt;
+      pageIndicator.textContent = `${currentIndex + 1}/${images.length}`;
+    });
+  </script>
+</section>
+
+<!-- ---
+import Button from "../components/Button.astro";
+import { Image } from "astro:assets";
+import Decembercover from "../assets/images/decembercover.webp";
+---
+
+<section>
+  <div class="flex flex-row justify-center items-center pl-3 pr-3 pt-12 pb-12">
+    <div class="">
+      <p
+        class="flex justify-center items-center pb-3 font-Brandon font-light text-Navy-500"
+      >
+        1/5
+      </p>
+
+      <Image
+        src={Decembercover}
+        alt="Eurowoman December issue cover"
+        class=""
+      />
+    </div>
+  </div>
+</section>
+<div class="flex flex-row justify-center items-center">
+  <Button variant="primary">ABONNER</Button>
+</div> -->
