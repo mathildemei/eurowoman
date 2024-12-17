@@ -1,6 +1,76 @@
 ---
+import { Image } from "astro:assets";
+import arrow from "../assets/images/arrow.webp";
+import Link from "../components/Link.astro";
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
-</div>
-  
+
+<!-- Footer -->
+<footer
+  class="bg-BW-950 text-BW-50 w-full pb-24 pt-24 pl-3 pr-3 md:pt-24 md:pb-24"
+>
+  <!-- Container for Content -->
+  <div class="max-w-screen-lg mx-auto flex flex-row gap-8">
+    <!-- Left Section: Video and Text -->
+    <div class="flex flex-col items-start gap-4">
+      <video
+        autoplay
+        muted
+        loop
+        class="w-full min-w-[200px] md:w-60 lg:w-72 xl:w-80"
+      >
+        <source src="/footer_video.mov" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p class="text-p-S-desktop lg:text-base font-Brandon max-w-xs font-light">
+        Abonner og få Eurowoman leveret til din dør med fuld adgang til hele
+        vores arkiv og alle vores eksklusive artikler.
+      </p>
+    </div>
+    <!-- Right Section: Address, Partners, and Contact -->
+    <div class="flex flex-col gap-6 text-sm lg:text-base lg:ml-auto">
+      <!-- Address -->
+      <div>
+        <h4 class="text-h4-desktop font-IvyOra font-light">ADRESSE</h4>
+        <p class="p-M-mobile lg:text-p-S-desktop font-Brandon font-light">
+          Story House Egmont<br />
+          Strødamvej 46<br />
+          2100 København Ø<br />
+          CVR 83131128
+        </p>
+      </div>
+
+      <!-- Partners -->
+      <div>
+        <h4 class="text-h4-desktop font-IvyOra font-light">PARTNERE</h4>
+        <ul class="p-M-mobile lg:text-p-S-desktop font-Brandon font-light">
+          <li><Link href="/" target="_blank">KitchenOne.dk</Link></li>
+          <li><Link href="/" target="_blank">Jollyroom.dk</Link></li>
+          <li><Link href="/" target="_blank">Outnorth.dk</Link></li>
+          <li><Link href="/" target="_blank">Nicehair.dk</Link></li>
+          <li><Link href="/" target="_blank">Med24.dk</Link></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="text-h4-desktop font-IvyOra font-light">KONTAKT</h4>
+        <ul class="p-M-mobile lg:text-p-S-desktop font-Brandon font-light">
+          <li><Link href="/" target="_blank">Annoncekontakt</Link></li>
+          <li><Link href="/" target="_blank">Annonceinfo</Link></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Large "ABONNER" Section -->
+  <div class="mt-8 pt-8 flex flex-col lg:flex-row items-center justify-between">
+    <h2
+      class="text-display02-desktop lg:text-display01-desktop font-IvyOra tracking-wide font-light"
+    >
+      <Link href="/abonner" target="_blank">ABONNER</Link>
+    </h2>
+    <div class="hidden lg:block">
+      <!-- Use this to hide on mobile and show on desktop -->
+      <Image src={arrow} alt="Arrow tegn" class="sm:object-none" />
+    </div>
+  </div>
+</footer>
