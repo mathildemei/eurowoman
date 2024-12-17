@@ -1,0 +1,97 @@
+---
+import Button from "../components/Button.astro";
+---
+
+<section
+  class="bg-Beige-500 flex flex-col justify-center items-center pl-3 pr-3 pt-32 pb-12 sm:pl-6 sm:pr-6 md:pl-96 md:pr-96 md:pt-48 pb-48"
+>
+  <div class="flex items-center justify-start m-0 p-0 pb-6 w-full">
+    <p class="font-IvyOra text-BW-950 font-light text-p-L-mobile mr-4 m-0">
+      FULDENAVN
+    </p>
+    <div class="relative flex-1 m-0 p-0">
+      <input
+        type="text"
+        id="name"
+        placeholder=""
+        class="font-Brandon text-BW-950 font-light w-full bg-transparent border-b-2 border-t-0 border-r-0 border-l-0 border-BW-950 outline-none h-full m-0 p-0"
+      />
+    </div>
+  </div>
+
+  <div class="flex items-center justify-start m-0 p-0 pb-6 pt-4 w-full">
+    <p class="font-IvyOra text-BW-950 font-light text-p-L-mobile mr-4 m-0">
+      E-MAIL
+    </p>
+    <div class="relative flex-1 m-0 p-0">
+      <input
+        type="email"
+        id="email"
+        placeholder=""
+        class="font-Brandon text-BW-950 font-light w-full bg-transparent border-b-2 border-t-0 border-r-0 border-l-0 border-BW-950 outline-none h-full m-0 p-0"
+      />
+    </div>
+  </div>
+
+  <div class="flex items-center justify-start m-0 p-0 pb-6 pt-4 w-full">
+    <p class="font-IvyOra text-BW-950 font-light text-p-L-mobile mr-4 m-0">
+      ADRESSE
+    </p>
+    <div class="relative flex-1 m-0 p-0">
+      <input
+        type="text"
+        id="adress"
+        placeholder=""
+        class="font-Brandon text-BW-950 font-light w-full bg-transparent border-b-2 border-t-0 border-r-0 border-l-0 border-BW-950 outline-none h-full m-0 p-0"
+      />
+    </div>
+  </div>
+
+  <div class="flex items-center justify-start m-0 p-0 pb-6 pt-4 w-full">
+    <p class="font-IvyOra text-BW-950 font-light text-p-L-mobile mr-4 m-0">
+      TELEFON
+    </p>
+    <div class="relative flex-1 m-0 p-0">
+      <input
+        type="number"
+        id="number"
+        placeholder=""
+        class="font-Brandon text-BW-950 font-light w-full bg-transparent border-b-2 border-t-0 border-r-0 border-l-0 border-BW-950 outline-none h-full m-0 p-0"
+      />
+    </div>
+  </div>
+
+  <div class="flex items-center justify-start m-0 p-0 pb-6 pt-4 w-full">
+    <p class="font-IvyOra text-BW-950 font-light text-p-L-mobile mr-4 m-0">
+      VÆLG ØNSKET START DATO*
+    </p>
+    <div class="relative flex-1 m-0 p-0">
+      <input
+        type="date"
+        id="startDate"
+        placeholder=""
+        class="font-Brandon text-BW-950 font-light w-full bg-transparent border-b-2 border-t-0 border-r-0 border-l-0 border-BW-950 outline-none h-full m-0 p-0"
+      />
+    </div>
+  </div>
+
+  <div class="flex flex-row justify-start items-start space-x-3">
+    <!-- Button -->
+    <button
+      class="w-10 h-4 border border-black cursor-pointer hover:bg-BW-400 active:bg-BW-950 active:border-BW-950 transition-colors duration-200"
+    >
+    </button>
+    <p class="font-Brandon text-p-M-mobile font-light md:text-p-XS-desktop">
+      Jeg har jeg og accepteret, at dette tilbud fortsætter i løbende abonnement
+      til: 89,95 DKK + 12 DKK i porto. I alt 101,95, DKK pr. levering, med
+      mindre jeg opsiger eller sætter abonnementet på pause. Jeg har altid 1
+      måneds opsigelsesvarsel og det gælder også for introduktionstilbuddet,
+      eller hvis jeg giver abonnementet til en anden.
+    </p>
+  </div>
+
+  <!-- Button aligned to the right -->
+  <div class="flex items-center justify-end w-full mt-6">
+    <a href="/"><Button variant="primary">TIL BETALING</Button></a>
+  </div>
+</section>
