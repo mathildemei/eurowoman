@@ -29,3 +29,18 @@ import Sektion9 from "../components/Sektion9_Forside.astro";
     <Sektion9 />
   </section>
 </MainLayout>
+
+<script>
+  const password = "Eurowoman";
+  const userPassword = localStorage.getItem("password");
+
+  if (userPassword !== password) {
+    const enteredPassword = prompt("Enter the password to acces this site:");
+    if (enteredPassword !== password) {
+      alert("Incorrect password!");
+      window.location.href = "https://isitfridayyet.net/"; // Redirect or block access
+    } else {
+      localStorage.setItem("password", enteredPassword);
+    }
+  }
+</script>
