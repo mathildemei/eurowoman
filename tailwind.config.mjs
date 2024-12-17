@@ -125,7 +125,7 @@ export default {
 
                /* Desktop */
             "display01-desktop": ['10.75rem', { lineHeight: '5.5rem' }],
-            "display02-desktop": ['6.375rem', { lineHeight: '5rem' }],
+            "display02-desktop": ['6.375rem', { lineHeight: '6rem' }],
             "qutoe-desktop": ['3.5rem', { lineHeight: '4rem' }],
             "h1-desktop": ['3rem', { lineHeight: '3.75rem' }],
             "h2-desktop": ['1.5rem', { lineHeight: '3rem' }],

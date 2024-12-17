@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import baggrundsimg from "../assets/images/baggrundsimg.webp";
+import Button from "../components/Button.astro";
+---
+
+<section class="relative h-[900px] sm:h-[850px] flex items-center text-BW-50">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <Image
+      src={baggrundsimg}
+      alt="Background"
+      class="w-full h-full object-cover"
+    />
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-screen px-6">
+    <!-- Heading -->
+    <h1
+      class="font-IvyOra font-light uppercase text-left text-BW-50 text-display01-mobile md:text-display02-desktop"
+    >
+      GÅ ALDRIG GLIP AF DET<br />NYESTE FRA EUROWOMAN
+    </h1>
+
+    <!-- Newsletter Form -->
+    <div class="mt-8 flex justify-end items-center gap-4">
+      <!-- Email Input -->
+      <div class="relative w-full sm:w-auto">
+        <input
+          type="email"
+          id="email"
+          placeholder="Din e-mail"
+          class="font-Brandon text-BW-50 font-light w-full sm:w-[300px] bg-transparent border-b-2 border-t-0 border-r-0 border-l-0 border-BW-50 outline-none"
+        />
+      </div>
+
+      <!-- Submit Button -->
+      <a href="/"><Button variant="secondary">TILMELD NYHEDSBREV</Button></a>
+    </div>
+  </div>
+</section>
