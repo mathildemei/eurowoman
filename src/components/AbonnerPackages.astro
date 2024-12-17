@@ -1,48 +1,91 @@
 ---
 import AbonnerCard from "../components/AbonnerCard.astro";
+import Link from "../components/Link.astro";
 ---
 
 <section>
-  <AbonnerCard
-    url="#"
-    cardimage="Abonner_img.webp"
-    cardimagealt="Eurowoman grafisk display af hvad abonnementet indeholder"
-    abonnementtype="MÅNEDLIGT ABONNEMENT"
-    inkluderet="+ Gratis digitale udgaver hver måned"
-    pris="89,95 DKK/per. måned"
-    badgerabat="false"
-  />
-  <br />
-  <AbonnerCard
-    url="#"
-    cardimage="Abonner_img.webp"
-    cardimagealt="Eurowoman grafisk display af hvad abonnementet indeholder"
-    abonnementtype="12 NUMRE AF EUROWOMAN"
-    inkluderet="+ Gratis digitale udgaver hver måned"
-    pris="499 DKK"
-    badgerabat="true"
-    badgerabatsats="/spar 764 DKK"
-  />
-  <br />
-  <AbonnerCard
-    url="#"
-    cardimage="Abonner_img.webp"
-    cardimagealt="Eurowoman grafisk display af hvad abonnementet indeholder"
-    abonnementtype="6 NUMRE AF EUROWOMAN"
-    inkluderet="+ Gratis digitale udgaver hver måned"
-    pris="259 DKK"
-    badgerabat="true"
-    badgerabatsats="/spar 352 DKK"
-  />
-  <br />
-  <AbonnerCard
-    url="#"
-    cardimage="Abonner_img.webp"
-    cardimagealt="Eurowoman grafisk display af hvad abonnementet indeholder"
-    abonnementtype="6 NUMRE AF EUROWOMAN"
-    inkluderet="+ Gratis digitale udgaver hver måned"
-    pris="159 DKK"
-    badgerabat="true"
-    badgerabatsats="/spar 146 DKK"
-  />
+  <div class="flex flex-row items-start justify-start pl-6">
+    <h1
+      class="font-IvyOra text-h2-mobile font-light md:text-h3-desktop pb-6 pt-6"
+    >
+      ABONNEMENTER
+    </h1>
+  </div>
+  <article class="flex flex-col gap-6">
+    <AbonnerCard
+      url="#"
+      cardimage="Abonner_img.webp"
+      cardimagealt="Eurowoman grafisk display af hvad abonnementet indeholder"
+      abonnementtype="MÅNEDLIGT ABONNEMENT"
+      inkluderet="+ Gratis digitale udgaver hver måned"
+      pris="89,95 DKK/per. måned"
+      badgerabat="false"
+    />
+
+    <AbonnerCard
+      url="#"
+      cardimage="Abonner_img.webp"
+      cardimagealt="Eurowoman grafisk display af hvad abonnementet indeholder"
+      abonnementtype="12 NUMRE AF EUROWOMAN"
+      inkluderet="+ Gratis digitale udgaver hver måned"
+      pris="499 DKK"
+      badgerabat="true"
+      badgerabatsats="/spar 764 DKK"
+    />
+
+    <AbonnerCard
+      url="#"
+      cardimage="Abonner_img.webp"
+      cardimagealt="Eurowoman grafisk display af hvad abonnementet indeholder"
+      abonnementtype="6 NUMRE AF EUROWOMAN"
+      inkluderet="+ Gratis digitale udgaver hver måned"
+      pris="259 DKK"
+      badgerabat="true"
+      badgerabatsats="/spar 352 DKK"
+    />
+
+    <AbonnerCard
+      url="#"
+      cardimage="Abonner_img.webp"
+      cardimagealt="Eurowoman grafisk display af hvad abonnementet indeholder"
+      abonnementtype="6 NUMRE AF EUROWOMAN"
+      inkluderet="+ Gratis digitale udgaver hver måned"
+      pris="159 DKK"
+      badgerabat="true"
+      badgerabatsats="/spar 146 DKK"
+    />
+  </article>
+  <article class="pl-6 p-12">
+    <h2 class="font-Brandon text-h3-mobile font-light md:text-p-L-desktop">
+      Hvem er abonnementet til?
+    </h2>
+    <div class="pt-3 flex items-center justify-start md:justify-start">
+      <div class="flex flex-row justify-start items-center space-x-3">
+        <!-- Button -->
+        <button
+          class="w-4 h-4 border border-black cursor-pointer hover:bg-BW-400 active:bg-BW-950 active:border-BW-950 transition-colors duration-200"
+        >
+        </button>
+        <p
+          class="font-Brandon text-p-L-mobile font-light md:text-p-S-deskto hover:font-medium"
+        >
+          Mig selv
+        </p>
+      </div>
+    </div>
+    <div class="flex items-center justify-start md:justify-start">
+      <div class="flex flex-row justify-start items-center space-x-3">
+        <!-- Button -->
+        <button
+          class="w-4 h-4 border border-black cursor-pointer hover:bg-BW-400 active:bg-BW-950 active:border-BW-950 transition-colors duration-200"
+        >
+        </button>
+        <p
+          class="font-Brandon text-p-L-mobile font-light md:text-p-S-deskto hover:font-medium"
+        >
+          Gave
+        </p>
+      </div>
+    </div>
+  </article>
 </section>
