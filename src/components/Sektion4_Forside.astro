@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+import billede1 from "../assets/images/billede1.webp";
+import billede2 from "../assets/images/billede2.webp";
+import billede3 from "../assets/images/billede3.webp";
+import billede4 from "../assets/images/billede4.webp";
+---
+
+<section class="px-4 py-8 lg:py-16 bg-BW-50">
+  <!-- Section Heading -->
+  <div class="text-right mr-12 mb-4">
+    <h1 class="text-[48px] font-IvyOra text-BW-950">MEST LÆSTE</h1>
+    <h2 class="text-[24px] font-Brandon text-BW-950 font-light">
+      I Eurowoman December 2024
+    </h2>
+  </div>
+
+  <section class="px-4 py-8 lg:py-16 bg-BW-50">
+    <!-- Grid Container -->
+    <div
+      class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12 max-w-screen-xl mx-auto"
+    >
+      <!-- Image 1 -->
+      <div class="relative flex flex-col overflow-hidden">
+        <Image
+          src={billede1}
+          alt="Billede 1"
+          class="w-full h-auto lg:h-[68vh] object-cover transition-transform duration-500 ease-in-out transform hover:scale-105"
+        />
+        <p
+          class="text-[20px] italic text-BW-950 font-light font-Brandon text-left mt-3"
+        >
+          Det startede med et armbånd – nu har de succes i hele verden
+        </p>
+      </div>
+      <!-- Image 2 -->
+      <div class="relative flex flex-col overflow-hidden">
+        <Image
+          src={billede2}
+          alt="Billede 2"
+          class="w-full h-auto lg:h-[68vh] object-cover transition-transform duration-500 ease-in-out transform hover:scale-105"
+        />
+        <p
+          class="text-[20px] italic text-BW-950 font-light font-Brandon text-left mt-3"
+        >
+          ”Det er første gang i 13 år, jeg føler, at mit hjem er en rigtig base”
+        </p>
+      </div>
+      <!-- Image 3 -->
+      <div class="relative flex flex-col overflow-hidden">
+        <Image
+          src={billede3}
+          alt="Billede 3"
+          class="w-full h-auto lg:h-[68vh] object-cover transition-transform duration-500 ease-in-out transform hover:scale-105"
+        />
+        <p
+          class="text-[20px] italic text-BW-950 font-light font-Brandon text-left mt-3"
+        >
+          Opnå vinterens flotte glossy hair med disse 3 tips
+        </p>
+      </div>
+      <!-- Image 4 -->
+      <div class="relative flex flex-col overflow-hidden">
+        <Image
+          src={billede4}
+          alt="Billede 4"
+          class="w-full h-auto lg:h-[68vh] object-cover transition-transform duration-500 ease-in-out transform hover:scale-105"
+        />
+        <p
+          class="text-[20px] italic text-BW-950 font-light font-Brandon text-left mt-3"
+        >
+          Modeekspert: Derfor udstråler denne modetrend rigdom
+        </p>
+      </div>
+    </div>
+  </section>
+</section>
