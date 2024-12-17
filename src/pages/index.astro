@@ -30,7 +30,7 @@ import Sektion9 from "../components/Sektion9_Forside.astro";
   </section>
 </MainLayout>
 
-<script>
+<!-- <script>
   const password = "Eurowoman";
   const userPassword = localStorage.getItem("password");
 
@@ -39,6 +39,33 @@ import Sektion9 from "../components/Sektion9_Forside.astro";
     if (enteredPassword !== password) {
       alert("Incorrect password!");
       window.location.href = "https://isitfridayyet.net/"; // Redirect or block access
+    } else {
+      localStorage.setItem("password", enteredPassword);
+    }
+  }
+</script> -->
+
+<script>
+  const password = "Eurowoman";
+  const userPassword = localStorage.getItem("password");
+
+  if (userPassword !== password) {
+    let enteredPassword = null;
+
+    try {
+      // Try showing the prompt
+      enteredPassword = prompt("Enter the password to access this site:");
+    } catch (error) {
+      console.error("Prompt failed or was blocked by the browser.");
+    }
+
+    // Handle cases where prompt is not supported
+    if (!enteredPassword) {
+      alert("Password prompt is not supported on your browser!");
+      window.location.href = "https://isitfridayyet.net/";
+    } else if (enteredPassword !== password) {
+      alert("Incorrect password!");
+      window.location.href = "https://isitfridayyet.net/";
     } else {
       localStorage.setItem("password", enteredPassword);
     }
