@@ -30,15 +30,15 @@ import img from "../assets/images/Abonner_img.webp";
         </p>
 
         <div
-          class="flex items-start justify-start md:justify-start space-x-3 pt-6"
+          class="flex items-center justify-start md:justify-start space-x-3 pt-6"
         >
-          <div
-            id="toggleButton"
+          <!-- Button -->
+          <button
             class="w-4 h-4 border border-black cursor-pointer hover:bg-BW-400 active:bg-BW-950 active:border-BW-950 transition-colors duration-200"
-            onclick="toggleState()"
           >
-          </div>
+          </button>
 
+          <!-- Text -->
           <p
             class="font-Brandon text-p-M-mobile font-light md:text-p-S-desktop"
           >
@@ -49,22 +49,3 @@ import img from "../assets/images/Abonner_img.webp";
     </div>
   </article>
 </section>
-
-<script>
-  function toggleState() {
-    const button = document.getElementById("toggleButton");
-
-    // Toggle the "pressed" state when clicked
-    button.classList.toggle("bg-black"); // Add/remove black background for pressed state
-    button.classList.toggle("border-black"); // Add/remove black border when clicked
-
-    // Optionally, you can also remove the hover effect after click
-    if (button.classList.contains("bg-black")) {
-      // If in the pressed state, remove the hover effect
-      button.classList.remove("hover:bg-BW-400");
-    } else {
-      // If not in the pressed state, restore the hover effect
-      button.classList.add("hover:bg-BW-400");
-    }
-  }
-</script>
