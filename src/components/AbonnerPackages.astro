@@ -1,91 +1,118 @@
 ---
 import AbonnerCard from "../components/AbonnerCard.astro";
-import Link from "../components/Link.astro";
 ---
 
-<section>
-  <div class="flex flex-row items-start justify-start pl-6">
-    <h1
-      class="font-IvyOra text-h2-mobile font-light md:text-h3-desktop pb-6 pt-6"
+<section class="grid grid-cols-1 md:grid-cols-[4fr_2fr] min-h-screen">
+  <section
+    class="hidden md:flex h-full w-full bg-cover bg-center justify-center items-center relative"
+    style="background-image: url('/Abonner_parallax.webp');"
+  >
+    <!-- Centered Video -->
+    <video autoplay muted loop class="w-1/3 md:w-1/2 lg:w-1/2">
+      <source src="/footer_video.mov" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay Text -->
+    <article
+      class="absolute inset-0 flex flex-col items-center justify-center pl-6"
     >
-      ABONNEMENTER
-    </h1>
-  </div>
-  <article class="flex flex-col gap-6">
-    <AbonnerCard
-      url="#"
-      cardimage="Abonner_img.webp"
-      cardimagealt="Eurowoman grafisk display af hvad abonnementet indeholder"
-      abonnementtype="MÅNEDLIGT ABONNEMENT"
-      inkluderet="+ Gratis digitale udgaver hver måned"
-      pris="89,95 DKK/per. måned"
-      badgerabat="false"
-    />
+      <p
+        class="text-BW-50 font-Brandon text-p-L-desktop font-light text-left self-start"
+      >
+        89 DKK/per. måned
+      </p>
 
-    <AbonnerCard
-      url="#"
-      cardimage="Abonner_img.webp"
-      cardimagealt="Eurowoman grafisk display af hvad abonnementet indeholder"
-      abonnementtype="12 NUMRE AF EUROWOMAN"
-      inkluderet="+ Gratis digitale udgaver hver måned"
-      pris="499 DKK"
-      badgerabat="true"
-      badgerabatsats="/spar 764 DKK"
-    />
+      <p class="text-BW-50 font-IvyOra text-display02-desktop font-light">
+        EKSKLUSIVE ABONNEMENTER
+      </p>
+    </article>
+  </section>
 
-    <AbonnerCard
-      url="#"
-      cardimage="Abonner_img.webp"
-      cardimagealt="Eurowoman grafisk display af hvad abonnementet indeholder"
-      abonnementtype="6 NUMRE AF EUROWOMAN"
-      inkluderet="+ Gratis digitale udgaver hver måned"
-      pris="259 DKK"
-      badgerabat="true"
-      badgerabatsats="/spar 352 DKK"
-    />
-
-    <AbonnerCard
-      url="#"
-      cardimage="Abonner_img.webp"
-      cardimagealt="Eurowoman grafisk display af hvad abonnementet indeholder"
-      abonnementtype="6 NUMRE AF EUROWOMAN"
-      inkluderet="+ Gratis digitale udgaver hver måned"
-      pris="159 DKK"
-      badgerabat="true"
-      badgerabatsats="/spar 146 DKK"
-    />
-  </article>
-  <article class="pl-6 p-12">
-    <h2 class="font-Brandon text-h3-mobile font-light md:text-p-L-desktop">
-      Hvem er abonnementet til?
-    </h2>
-    <div class="pt-3 flex items-center justify-start md:justify-start">
-      <div class="flex flex-row justify-start items-center space-x-3">
-        <!-- Button -->
-        <button
-          class="w-4 h-4 border border-black cursor-pointer hover:bg-BW-400 active:bg-BW-950 active:border-BW-950 transition-colors duration-200"
-        >
-        </button>
-        <p
-          class="font-Brandon text-p-L-mobile font-light md:text-p-S-deskto hover:font-medium"
-        >
-          Mig selv
-        </p>
-      </div>
+  <section>
+    <div class="flex flex-row items-start justify-start pl-6">
+      <h1
+        class="font-IvyOra text-h2-mobile font-light md:text-h3-desktop pb-6 pt-6"
+      >
+        ABONNEMENTER
+      </h1>
     </div>
-    <div class="flex items-center justify-start md:justify-start">
-      <div class="flex flex-row justify-start items-center space-x-3">
-        <!-- Button -->
-        <button
-          class="w-4 h-4 border border-black cursor-pointer hover:bg-BW-400 active:bg-BW-950 active:border-BW-950 transition-colors duration-200"
-        >
-        </button>
-        <p
-          class="font-Brandon text-p-L-mobile font-light md:text-p-S-deskto hover:font-medium"
-        >
-          Gave
-        </p>
+    <article class="flex flex-col gap-6">
+      <AbonnerCard
+        url="#"
+        cardimage="Abonner_img.webp"
+        cardimagealt="Eurowoman grafisk display af hvad abonnementet indeholder"
+        abonnementtype="MÅNEDLIGT ABONNEMENT"
+        inkluderet="+ Gratis digitale udgaver hver måned"
+        pris="89,95 DKK/per. måned"
+        badgerabat="false"
+      />
+
+      <AbonnerCard
+        url="#"
+        cardimage="Abonner_img.webp"
+        cardimagealt="Eurowoman grafisk display af hvad abonnementet indeholder"
+        abonnementtype="12 NUMRE AF EUROWOMAN"
+        inkluderet="+ Gratis digitale udgaver hver måned"
+        pris="499 DKK"
+        badgerabat="true"
+        badgerabatsats="/spar 764 DKK"
+      />
+
+      <AbonnerCard
+        url="#"
+        cardimage="Abonner_img.webp"
+        cardimagealt="Eurowoman grafisk display af hvad abonnementet indeholder"
+        abonnementtype="6 NUMRE AF EUROWOMAN"
+        inkluderet="+ Gratis digitale udgaver hver måned"
+        pris="259 DKK"
+        badgerabat="true"
+        badgerabatsats="/spar 352 DKK"
+      />
+
+      <AbonnerCard
+        url="#"
+        cardimage="Abonner_img.webp"
+        cardimagealt="Eurowoman grafisk display af hvad abonnementet indeholder"
+        abonnementtype="6 NUMRE AF EUROWOMAN"
+        inkluderet="+ Gratis digitale udgaver hver måned"
+        pris="159 DKK"
+        badgerabat="true"
+        badgerabatsats="/spar 146 DKK"
+      />
+    </article>
+    <article class="pl-6 p-12">
+      <h2 class="font-Brandon text-h3-mobile font-light md:text-p-L-desktop">
+        Hvem er abonnementet til?
+      </h2>
+      <div class="pt-3 flex items-center justify-start md:justify-start">
+        <div class="flex flex-row justify-start items-center space-x-3">
+          <!-- Button -->
+          <button
+            class="w-4 h-4 border border-black cursor-pointer hover:bg-BW-400 active:bg-BW-950 active:border-BW-950 transition-colors duration-200"
+          >
+          </button>
+          <p
+            class="font-Brandon text-p-L-mobile font-light md:text-p-S-deskto hover:font-medium"
+          >
+            Mig selv
+          </p>
+        </div>
       </div>
-    </div>
-  </article>
+      <div class="flex items-center justify-start md:justify-start">
+        <div class="flex flex-row justify-start items-center space-x-3">
+          <!-- Button -->
+          <button
+            class="w-4 h-4 border border-black cursor-pointer hover:bg-BW-400 active:bg-BW-950 active:border-BW-950 transition-colors duration-200"
+          >
+          </button>
+          <p
+            class="font-Brandon text-p-L-mobile font-light md:text-p-S-deskto hover:font-medium"
+          >
+            Gave
+          </p>
+        </div>
+      </div>
+    </article>
+  </section>
 </section>
