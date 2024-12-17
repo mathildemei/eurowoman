@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets";
+import img from "../assets/images/Abonner_img.webp";
+---
+
+<section class="flex flex-row items-center justify-center">
+  <article
+    class="bg-Beige-500 flex flex-row md:flex-row items-center overflow-hidden pr-6 pl-3 pt-2 pb-2"
+  >
+    <!-- Left Section: Images -->
+    <div class="w-[130px] h-[150px] md:flex justify-center items-center p-3">
+      <div class="relative">
+        <Image
+          src={img}
+          alt="Eurowoman grafisk display af abonnementpakkerne"
+        />
+      </div>
+    </div>
+
+    <!-- Right Section: Subscription Info -->
+    <div class="flex flex-row items-center justify-center">
+      <div
+        class="flex flex-col items-start text-start md:items-start md:text-left"
+      >
+        <h2 class="font-IvyOra text-p-L-mobile font-light md:text-p-M-desktop">
+          MÅNEDLIGT ABONNEMENT
+        </h2>
+        <p class="font-Brandon text-p-M-mobile font-light md:text-p-S-desktop">
+          + Gratis digitale udgaver hver måned
+        </p>
+
+        <div
+          class="flex items-start justify-start md:justify-start space-x-3 pt-6"
+        >
+          <div
+            id="toggleButton"
+            class="w-4 h-4 border border-black cursor-pointer hover:bg-BW-400 active:bg-BW-950 active:border-BW-950 transition-colors duration-200"
+            onclick="toggleState()"
+          >
+          </div>
+
+          <p
+            class="font-Brandon text-p-M-mobile font-light md:text-p-S-desktop"
+          >
+            89,95 DKK/per. måned
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<script>
+  function toggleState() {
+    const button = document.getElementById("toggleButton");
+
+    // Toggle the "pressed" state when clicked
+    button.classList.toggle("bg-black"); // Add/remove black background for pressed state
+    button.classList.toggle("border-black"); // Add/remove black border when clicked
+
+    // Optionally, you can also remove the hover effect after click
+    if (button.classList.contains("bg-black")) {
+      // If in the pressed state, remove the hover effect
+      button.classList.remove("hover:bg-BW-400");
+    } else {
+      // If not in the pressed state, restore the hover effect
+      button.classList.add("hover:bg-BW-400");
+    }
+  }
+</script>
