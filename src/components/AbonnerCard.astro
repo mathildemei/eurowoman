@@ -1,51 +1,69 @@
 ---
-import { Image } from "astro:assets";
-import img from "../assets/images/Abonner_img.webp";
+const {
+  url = "#",
+  cardimage = "",
+  cardimagalt = "",
+  abonnementtype = "",
+  inkluderet = "",
+  pris = "",
+  badgerabat = "false",
+  badgerabatsats = "",
+} = Astro.props;
 ---
 
-<section class="flex flex-row items-center justify-center">
-  <article
-    class="bg-Beige-500 flex flex-row md:flex-row items-center overflow-hidden pr-6 pl-3 pt-2 pb-2"
-  >
-    <!-- Left Section: Images -->
-    <div class="w-[130px] h-[150px] md:flex justify-center items-center p-3">
-      <div class="relative">
-        <Image
-          src={img}
-          alt="Eurowoman grafisk display af abonnementpakkerne"
-        />
+<a href={url}>
+  <section class="flex flex-row items-center justify-center">
+    <article
+      class="bg-Beige-500 flex flex-row md:flex-row items-center overflow-hidden pr-6 pl-3 pt-2 pb-2"
+    >
+      <!-- Left Section: Images -->
+      <div class="w-[130px] h-[150px] md:flex justify-center items-center p-3">
+        <div class="relative">
+          <img src={cardimage} alt={cardimagalt} />
+        </div>
       </div>
-    </div>
 
-    <!-- Right Section: Subscription Info -->
-    <div class="flex flex-row items-center justify-center">
-      <div
-        class="flex flex-col items-start text-start md:items-start md:text-left"
-      >
-        <h2 class="font-IvyOra text-p-L-mobile font-light md:text-p-M-desktop">
-          MÅNEDLIGT ABONNEMENT
-        </h2>
-        <p class="font-Brandon text-p-M-mobile font-light md:text-p-S-desktop">
-          + Gratis digitale udgaver hver måned
-        </p>
-
+      <!-- Right Section: Subscription Info -->
+      <div class="flex flex-row items-center justify-center">
         <div
-          class="flex items-center justify-start md:justify-start space-x-3 pt-6"
+          class="flex flex-col items-start text-start md:items-start md:text-left"
         >
-          <!-- Button -->
-          <button
-            class="w-4 h-4 border border-black cursor-pointer hover:bg-BW-400 active:bg-BW-950 active:border-BW-950 transition-colors duration-200"
+          <h2
+            class="font-IvyOra text-p-L-mobile font-light md:text-p-M-desktop"
           >
-          </button>
-
-          <!-- Text -->
+            <span>{abonnementtype}</span>
+          </h2>
           <p
             class="font-Brandon text-p-M-mobile font-light md:text-p-S-desktop"
           >
-            89,95 DKK/per. måned
+            <span>{inkluderet}</span>
           </p>
+
+          <div
+            class="flex items-center justify-start md:justify-start space-x-3 pt-6"
+          >
+            <!-- Button -->
+            <button
+              class="w-4 h-4 border border-black cursor-pointer hover:bg-BW-400 active:bg-BW-950 active:border-BW-950 transition-colors duration-200"
+            >
+            </button>
+
+            <!-- Text -->
+            <p
+              class="font-Brandon text-p-M-mobile font-light md:text-p-S-desktop"
+            >
+              <span>{pris}</span>
+              {
+                badgerabat === "true" && (
+                  <div class="badge text-Burgundy-400 font-Brandon text-p-M-mobile font-light md:text-p-S-desktop">
+                    <span>{badgerabatsats}</span>
+                  </div>
+                )
+              }
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </article>
-</section>
+    </article>
+  </section>
+</a>
