@@ -1,0 +1,88 @@
+---
+import { Image } from "astro:assets";
+import interior1 from "../assets/images/interior1.webp";
+import interior2 from "../assets/images/interior2.webp";
+import fashion1 from "../assets/images/fashion1.webp";
+import fashion2 from "../assets/images/fashion2.webp";
+---
+
+<section class="pt-48">
+  <article class="relative bg-BW-50 py-8">
+    <!-- Container -->
+    <div
+      class="max-w-screen-lg mx-auto grid grid-cols-1 pl-6 pr-6 md:grid-cols-2 gap-6 lg:gap-12 items-center px-0"
+    >
+      <!-- Image 1 -->
+      <div class="relative group">
+        <div class="relative h-[650px] sm:h-[400px] lg:h-[650px]">
+          <Image
+            src={interior1}
+            alt="Interior 1"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 carousel-img carousel-img-1"
+          />
+          <Image
+            src={fashion1}
+            alt="Fashion 1"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 carousel-img carousel-img-2"
+          />
+        </div>
+        <p
+          class="text-BW-950 font-light font-Brandon carousel-text text-p-L-mobile italic md:text-p-L-desktop"
+        >
+          ”Det er første gang i 13 år mit hjem føles som en base”
+        </p>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="relative group">
+        <div class="relative w-full h-[650px] sm:h-[400px] lg:h-[650px]">
+          <Image
+            src={interior2}
+            alt="Interior 2"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 carousel-img carousel-img-3"
+          />
+          <Image
+            src={fashion2}
+            alt="Fashion 2"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 carousel-img carousel-img-4"
+          />
+        </div>
+        <p
+          class="text-BW-950 font-light font-Brandon carousel-text text-p-L-mobile italic md:text-p-L-desktop"
+        >
+          Vores bud på sæsonens indretningstips
+        </p>
+      </div>
+    </div>
+  </article>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".carousel-img");
+    const texts = [
+      "”Det er første gang i 13 år mit hjem føles som en base”",
+      "Highlights fra Copenhagen Fashion Week",
+      "Vores bud på sæsonens indretningstips",
+      "Trend alert: Sådan “Birkyfier” du din taske",
+    ];
+
+    const textElements = document.querySelectorAll(".carousel-text");
+    let currentIndex = 0;
+
+    setInterval(() => {
+      // Update images
+      images.forEach((img, index) => {
+        img.style.opacity =
+          index === currentIndex || index === currentIndex + 2 ? "1" : "0";
+      });
+
+      // Update texts
+      textElements[0].textContent = texts[currentIndex];
+      textElements[1].textContent = texts[currentIndex + 2];
+
+      // Cycle index
+      currentIndex = (currentIndex + 1) % 2; // Alternates between 0 and 1
+    }, 3000); // Change every 3 seconds
+  });
+</script>
