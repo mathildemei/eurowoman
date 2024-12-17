@@ -1,0 +1,128 @@
+---
+import KontaktCard from "../components/KontaktCard.astro";
+---
+
+<section class="p-3 pr-3 pb-48">
+  <div class="border-b-2 border-BW-950">
+    <h1
+      class="font-IvyOra text-BW-950 font-light text-h1-mobile md:text-h1-desktop pb-6"
+    >
+      KONTAKT
+    </h1>
+  </div>
+  <article class="border-b-2 border-BW-950">
+    <h2
+      class="font-IvyOra text-BW-950 font-light text-h2-mobile md:text-h2-desktop pt-6"
+    >
+      REDAKTIONEN
+    </h2>
+    <div class="w-full md:w-1/2 ml-auto pt-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Card 1 -->
+        <div>
+          <KontaktCard
+            title="Chefredaktør"
+            navn="Anne Lose"
+            email="anne.lose@eurowoman.dk"
+          />
+        </div>
+        <!-- Card 2 -->
+        <div>
+          <KontaktCard
+            title="Art Director"
+            navn="Rikke Gråbæl"
+            email="rikke@eurowoman.dk"
+          />
+        </div>
+        <!-- Card 3 -->
+        <div>
+          <KontaktCard
+            title="Modereaktør"
+            navn="Anne Katinka von der Fehr"
+            email="annakatinka@eurowoman.dk"
+          />
+        </div>
+        <!-- Card 4 -->
+        <div>
+          <KontaktCard
+            title="Digital Redaktør"
+            navn="Julie Bruun Lund"
+            email="julie@alt.dk"
+          />
+        </div>
+        <!-- Card 5 -->
+        <div>
+          <KontaktCard
+            title="Redaktionschef"
+            navn="Mette Størum Krogh"
+            email="mette@eurowoman.dk"
+          />
+        </div>
+        <!-- Card 6 -->
+        <div class="pb-12">
+          <KontaktCard
+            title="Some- & Skønhedsredaktør"
+            navn="Mette Cathrine Damgaard Krogh"
+            email="cathrine@eurowoman.dk"
+          />
+        </div>
+      </div>
+    </div>
+  </article>
+  <article>
+    <h2
+      class="font-IvyOra text-BW-950 font-light text-h2-mobile md:text-h2-desktop pt-6"
+    >
+      KUNDESERVICE
+    </h2>
+    <div class="w-full md:w-1/2 ml-auto pt-6">
+      <!-- First Grid Section -->
+      <div class="pt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Left Column -->
+        <div>
+          <h3
+            class="font-Brandon text-BW-950 font-medium text-h3-mobile md:text-h3-desktop"
+          >
+            Abonnementsafdelingen
+          </h3>
+          <p
+            class="font-Brandon text-BW-950 font-light text-p-L-mobile md:text-p-L-desktop"
+          >
+            Tlf: 70 20 31 00
+          </p>
+          <p
+            class="font-Brandon text-BW-950 font-light text-p-L-mobile md:text-p-L-desktop"
+          >
+            Email: <span class="underline">kontakt@mitblad.dk</span>
+          </p>
+        </div>
+
+        <!-- Right Column -->
+        <div>
+          <h3
+            class="font-Brandon text-BW-950 font-medium text-h3-mobile md:text-h3-desktop"
+          >
+            Annonceafdelingen
+          </h3>
+          <p
+            class="font-Brandon text-BW-950 font-light text-p-L-mobile md:text-p-L-desktop"
+          >
+            <span class="underline">annoncesalg@egmontmagasiner.dk</span>
+          </p>
+          <p
+            class="font-Brandon text-BW-950 font-light text-p-L-mobile md:text-p-L-desktop"
+          >
+            <span class="underline">storyhouseegmont.dk/media-kit</span>
+          </p>
+          <p
+            class="font-Brandon text-BW-950 font-light text-p-L-mobile md:text-p-L-desktop"
+          >
+            <span class="underline"
+              >storyhouseegmont.dk/mediasales/contacts</span
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>

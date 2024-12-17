@@ -1,0 +1,21 @@
+---
+const { title = "", navn = "", email = "" } = Astro.props;
+---
+
+<section class="flex flex-col">
+  <h3
+    class="font-Brandon text-BW-950 font-medium text-h3-mobile md:text-h3-desktop"
+  >
+    {title}
+  </h3>
+  <p
+    class="font-Brandon text-BW-950 font-light text-p-L-mobile md:text-p-L-desktop"
+  >
+    {navn}
+  </p>
+  <p
+    class="font-Brandon text-BW-950 font-light text-p-L-mobile md:text-p-L-desktop"
+  >
+    Email: <span class="underline">{email}</span>
+  </p>
+</section>
