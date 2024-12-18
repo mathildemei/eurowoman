@@ -1,6 +1,7 @@
 ---
 const {
   url = "#",
+  scrollTarget = "", // Add a scroll target ID (e.g., "section-id")
   cardimage = "",
   cardimagalt = "",
   abonnementtype = "",
@@ -12,7 +13,7 @@ const {
 ---
 
 <script>
-  // JavaScript to handle card selection
+  // JavaScript to handle card selection and scroll functionality
   function setupCardSelection() {
     const cards = document.querySelectorAll(".selectable-card");
     let selectedCard = null;
@@ -20,6 +21,7 @@ const {
     cards.forEach((card) => {
       card.addEventListener("click", () => {
         const button = card.querySelector("button");
+        const scrollTargetId = card.dataset.scrollTarget;
 
         // If the card is already selected, deselect it
         if (selectedCard === card) {
@@ -37,6 +39,14 @@ const {
           card.classList.add("border-BW-950", "border");
           button.classList.add("bg-BW-950"); // Highlight the button
           selectedCard = card;
+
+          // Scroll to the target section if it exists
+          if (scrollTargetId) {
+            const targetElement = document.getElementById(scrollTargetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+          }
         }
       });
     });
@@ -48,10 +58,11 @@ const {
   }
 </script>
 
-<a href={url}>
+<a href={url} data-scroll-target={scrollTarget}>
   <section class="flex flex-row items-start justify-start pl-6">
     <article
       class="selectable-card bg-Beige-500 flex flex-row md:flex-row items-center overflow-hidden pr-6 pl-3 pt-2 pb-2 hover:border border-BW-950 cursor-pointer transition-all duration-200"
+      data-scroll-target={scrollTarget}
     >
       <!-- Left Section: Images -->
       <div class="w-[130px] h-[150px] md:flex justify-center items-center p-3">
